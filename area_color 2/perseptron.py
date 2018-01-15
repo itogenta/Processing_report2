@@ -17,8 +17,8 @@ def plot(wvec,x1,x2):
   x_fig=np.arange(-2,5,0.1)
   fig = plt.figure(figsize=(8, 8),dpi=100)
   ims = []
-  plt.xlim(-1,5.0)
-  plt.ylim(-1,5.0)
+  plt.xlim(-1,10.0)
+  plt.ylim(-1,10.0)
   # プロットする
   for w in wvec:
     y_fig = [-(w[0] / w[1]) * xi - (w[2] / w[1]) for xi in x_fig]
@@ -42,8 +42,8 @@ if __name__=='__main__':
    #t = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1 ,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1] # AND関数のラベル30個
 
   # AND関数のデータ(一番後ろの列はバイアス成分:1)
-  x1 = np.loadtxt("Sample1.txt") #クラス1(演算結果が0)の行列生成
-  x2 = np.loadtxt("Sample2.txt") # クラス2(演算結果が1)の行列生成
+  x1 = np.loadtxt("area.txt") #クラス1(演算結果が0)の行列生成
+  x2 = np.loadtxt("area2.txt") # クラス2(演算結果が1)の行列生成
   bias = np.array([sita2 for i in range(len(x1))])
   x1 = np.c_[x1,bias] #バイアスをクラス1のデータ最後尾に連結
   bias = np.array([sita for i in range(len(x2))])
