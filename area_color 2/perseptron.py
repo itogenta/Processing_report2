@@ -19,6 +19,7 @@ def plot(wvec,x1,x2):
   ims = []
   plt.xlim(-1,10.0)
   plt.ylim(-1,10.0)
+
   # プロットする
   for w in wvec:
     y_fig = [-(w[0] / w[1]) * xi - (w[2] / w[1]) for xi in x_fig]
